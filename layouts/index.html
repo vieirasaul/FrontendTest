@@ -153,20 +153,22 @@
             <script>
             $(document).ready(function () {
             // Set default price
-            var first_option = $('#options button').first();
-            first_option.addClass('active');
-            $('#price').text(first_option.data('price'));
+                var first_option = $('#options button').first();
+                first_option.addClass('active');
+                $('#price').text(first_option.data('price'));
             // Call newsletter modal
-            $('#newsletter').modal();
+                $('#newsletter').modal();
             // Activate change price
-            $('.option-btn').on('click', function (e) {
-            changePrice(e);
-            });
+                $('.option-btn').on('click', function (e) {
+                    changePrice(e);
+                });
             })
             var changePrice = function (e) {
             // Change active classes
-            $('.option-btn').removeClass('active');
-            $(e.target).addClass('active');
+                $('.option-btn').removeClass('active');
+                $(e.target).addClass('active');
+
+                $('#price').text($(e.target).data('price'));
             }
             </script>
         </body>
